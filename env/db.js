@@ -14,6 +14,7 @@ const connectDB = () => {
     .catch((error) => {
       console.log("Database connection failed!", error);
       console.log("Attempting to reconnect...");
+      console.log("Attempting....");
       setTimeout(() => {
         connectDB();
       }, 2000);
