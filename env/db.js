@@ -7,16 +7,16 @@ const mongoose = require("mongoose");
 // "mongodb+srv://samithrgowda:7zsJuGajQ7ONZicL@srdbcluster.b8lex.mongodb.net/SRDB2?retryWrites=true&w=majority&appName=SRDBCLUSTER"
 const connectDB = () => {
   mongoose
-    .connect("mongodb://localhost:27017/sarayu-test-project-ec2prashi")
+    .connect("mongodb://15.207.106.243:27017/sarayu-test-project-ec2prashi")
     .then(() => {
       console.log("Database connection successfull!");
     })
     .catch((error) => {
       console.log("Database connection failed!", error);
-      console.log("Attempting to reconnect...")
+      console.log("Attempting to reconnect...");
       setTimeout(() => {
         connectDB();
-      }, 2000); 
+      }, 2000);
     });
 };
 
